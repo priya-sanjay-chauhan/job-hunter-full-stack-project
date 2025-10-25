@@ -28,7 +28,7 @@ const Job = () => {
         queryKey: ["job"],
         queryFn: () =>
             getSingleHandler(
-                `https://full-stack-job-portal-server.vercel.app/api/v1/jobs/${id}`
+                `${import.meta.env.VITE_BACKEND_URL}/api/v1/jobs/${id}`
             ),
     });
 

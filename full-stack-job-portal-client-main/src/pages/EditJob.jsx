@@ -35,7 +35,7 @@ const EditJob = () => {
         queryKey: ["updateJob"],
         queryFn: () =>
             getSingleHandler(
-                `https://full-stack-job-portal-server.vercel.app/api/v1/jobs/${id}`
+                `${import.meta.env.VITE_BACKEND_URL}/api/v1/jobs/${id}`
             ),
     });
 
@@ -98,7 +98,7 @@ const EditJob = () => {
         // posting;
         updateJobMutation.mutate({
             body: updateJob,
-            url: `https://full-stack-job-portal-server.vercel.app/api/v1/jobs/${id}`,
+            url: `${import.meta.env.VITE_BACKEND_URL}/api/v1/jobs/${id}`,
         });
     };
     // const onSubmit = (data) => {

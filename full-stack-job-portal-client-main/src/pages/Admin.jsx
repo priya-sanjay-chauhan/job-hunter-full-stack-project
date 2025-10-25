@@ -9,7 +9,7 @@ const Admin = () => {
         queryKey: ["admin_info"],
         queryFn: () =>
             getAllHandler(
-                `https://full-stack-job-portal-server.vercel.app/api/v1/admin/info`
+                `${import.meta.env.VITE_BACKEND_URL}/api/v1/admin/info`
             ),
     });
 

@@ -32,7 +32,7 @@ const Stats = () => {
         queryKey: ["stats"],
         queryFn: () =>
             getAllHandler(
-                `https://full-stack-job-portal-server.vercel.app/api/v1/admin/stats`
+                `${import.meta.env.VITE_BACKEND_URL}/api/v1/admin/stats`
             ),
     });
 
